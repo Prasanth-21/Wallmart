@@ -1,0 +1,188 @@
+user@DESKTOP-2ANAHUG MINGW64 ~
+$ cd ~/Desktop
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop
+$ pwd
+/c/Users/user/Desktop
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop
+$ mkdir wallmart
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop
+$ cd wallmart
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart
+$ git init
+Initialized empty Git repository in C:/Users/user/Desktop/wallmart/.git/
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ cd .git
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart/.git (GIT_DIR!)
+$ ls
+config  description  HEAD  hooks/  info/  objects/  refs/
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart/.git (GIT_DIR!)
+$ ls -l
+total 7
+-rw-r--r-- 1 user 197121 130 Oct 31 06:16 config
+-rw-r--r-- 1 user 197121  73 Oct 31 06:16 description
+-rw-r--r-- 1 user 197121  23 Oct 31 06:16 HEAD
+drwxr-xr-x 1 user 197121   0 Oct 31 06:16 hooks/
+drwxr-xr-x 1 user 197121   0 Oct 31 06:16 info/
+drwxr-xr-x 1 user 197121   0 Oct 31 06:16 objects/
+drwxr-xr-x 1 user 197121   0 Oct 31 06:16 refs/
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart/.git (GIT_DIR!)
+$ cd ..
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ vim EmployeeService.java
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        EmployeeService.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ vi Dbutil.java
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Dbutil.java
+        EmployeeService.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git add EmployeeService.java
+warning: LF will be replaced by CRLF in EmployeeService.java.
+The file will have its original line endings in your working directory
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   EmployeeService.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Dbutil.java
+
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git config --global user.name "Prasanth-21"
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git config --global user.email "prasanth.mamidela@gmail.com"
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git config --global --list
+user.name=Prasanth-21
+user.email=prasanth.mamidela@gmail.com
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git commit -m "First Commit"
+[master (root-commit) 211bbfe] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 EmployeeService.java
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Dbutil.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git add .
+warning: LF will be replaced by CRLF in Dbutil.java.
+The file will have its original line endings in your working directory
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Dbutil.java
+
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git commit -m
+error: switch `m' requires a value
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git commit -m "second commit"
+[master 1fc2c32] second commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Dbutil.java
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git remote add wm https://github.com/Prasanth-21/Wallmart.git
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git remote -v
+wm      https://github.com/Prasanth-21/Wallmart.git (fetch)
+wm      https://github.com/Prasanth-21/Wallmart.git (push)
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git branch
+* master
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git push wm master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 542 bytes | 77.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Prasanth-21/Wallmart.git
+ * [new branch]      master -> master
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ vi EmployeeService.java
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git commit -a -v "update"
+fatal: paths 'update ...' with -a does not make sense
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git commit -a -m "update"
+warning: LF will be replaced by CRLF in EmployeeService.java.
+The file will have its original line endings in your working directory
+[master 6e48506] update
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-2ANAHUG MINGW64 ~/Desktop/wallmart (master)
+$ git push wm master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Prasanth-21/Wallmart.git
+   1fc2c32..6e48506  master -> master
+
